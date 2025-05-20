@@ -1,0 +1,41 @@
+{
+  "name": "@user-management/theia",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@user-management/react": "^1.0.0",
+    "@theia/core": "^1.43.0",
+    "@theia/plugin-ext": "^1.43.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@theia/cli": "^1.43.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/frontend-application-contribution",
+      "frontendElectron": "lib/electron-main/electron-main-module"
+    }
+  ],
+  "keywords": ["theia-extension"],
+  "files": ["lib"],
+  "theia": {
+    "frontend": {
+      "config": {
+        "webpack": "webpack.config.js"
+      }
+    }
+  }
+}
