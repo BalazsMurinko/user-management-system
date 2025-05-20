@@ -2,7 +2,7 @@
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "1.0.0",
   "npmClient": "yarn",
-  "packages": ["packages/*"],
+  "packages": ["react-user-management", "theia-user-management", "eclipse-user-management"],
   "command": {
     "publish": {
       "ignoreChanges": ["ignored-file", "*.md"],

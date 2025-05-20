@@ -1,5 +1,5 @@
 {
-  "name": "@user-management/theia",
+  "name": "@logicals/rbac-admin-ui-theia",
   "version": "1.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,7 +10,7 @@
     "watch": "tsc -w"
   },
   "dependencies": {
-    "@user-management/react": "^1.0.0",
+    "@logicals/rbac-admin-ui-react": "^1.0.0",
     "@theia/core": "^1.43.0",
     "@theia/plugin-ext": "^1.43.0",
     "react": "^18.2.0",

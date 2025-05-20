@@ -1,7 +1,7 @@
 {
-  "name": "@user-management/eclipse",
+  "name": "@logicals/rbac-admin-ui-eclipse",
   "version": "1.0.0",
-  "description": "Eclipse plugin for User Management",
+  "description": "Eclipse plugin for RBAC Admin UI",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -10,7 +10,7 @@
     "prepare": "yarn run clean && yarn run build"
   },
   "dependencies": {
-    "@user-management/react": "^1.0.0"
+    "@logicals/rbac-admin-ui-react": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^14.18.0",

@@ -1,5 +1,5 @@
 {
-  "name": "@user-management/react",
+  "name": "@logicals/rbac-admin-ui-react",
   "version": "1.0.0",
   "description": "React components for user and role management",
   "main": "lib/index.js",

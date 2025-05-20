@@ -1,53 +1,97 @@
-# User Management System
+# 🚀 User Management System
 
-A comprehensive user management solution with React components and IDE integrations. This monorepo contains three main packages:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-1. `@user-management/react` - Core React components and services for user management
-2. `@user-management/theia` - Theia widget integration
-3. `@user-management/eclipse` - Eclipse plugin integration
+A modern, extensible user management solution with React components and IDE integrations. Built with TypeScript and designed for enterprise-grade applications.
 
-## Features
+## ✨ Features
 
-- User list with search and filtering
-- User profile view with detailed information
-- Role-based access control
-- Theme support (light/dark mode)
-- Responsive design for different screen sizes
+- **User Management** - Comprehensive CRUD operations for user accounts
+- **Role-Based Access Control** - Fine-grained permission system
+- **Theme Support** - Built-in light/dark mode with theming capabilities
+- **Responsive Design** - Works on all device sizes
+- **IDE Integration** - Seamless integration with Theia and Eclipse
+- **TypeScript Support** - Full type definitions for better development experience
+- **Modular Architecture** - Easy to extend and customize
 
-## Project Structure
+## 📦 Packages
+
+This monorepo contains three main packages:
+
+| Package | Version | Description |
+|---------|---------|-------------|
+| `@user-management/react` | [![npm](https://img.shields.io/npm/v/@user-management/react)](https://www.npmjs.com/package/@user-management/react) | Core React components and services |
+| `@user-management/theia` | [![npm](https://img.shields.io/npm/v/@user-management/theia)](https://www.npmjs.com/package/@user-management/theia) | Theia widget integration |
+| `@user-management/eclipse` | [![npm](https://img.shields.io/npm/v/@user-management/eclipse)](https://www.npmjs.com/package/@user-management/eclipse) | Eclipse plugin integration |
+
+
+
+## 🏗 Project Structure
 
 ```
 user-management-system/
-├── packages/
-│   ├── react-user-management/    # Core React components
-│   ├── theia-user-management/    # Theia widget integration
-│   └── eclipse-user-management/  # Eclipse plugin integration
-├── lerna.json
-└── package.json
+├── react-user-management/      # Core React components and services
+│   ├── src/                    # Source code
+│   ├── public/                 # Static assets
+│   └── __tests__/              # Unit tests
+│
+├── theia-user-management/     # Theia widget integration
+│   └── src/                    # Theia extension code
+│
+├── eclipse-user-management/   # Eclipse plugin integration
+│   └── src/                    # Plugin source code
+│
+├── .github/                  # GitHub workflows and issue templates
+├── .vscode/                   # VS Code settings
+└── package.json               # Root package configuration
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (v14 or later)
-- Yarn (v1.22 or later)
-- Lerna (installed globally via `npm install -g lerna`)
+- Node.js `^16.14.0` or later
+- Yarn `^1.22.0` or npm `^8.0.0`
+- Git
 
-### Installation
+### Quick Start
 
-1. Install dependencies and bootstrap the monorepo:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/user-management-system.git
+   cd user-management-system
+   ```
+
+2. Install dependencies:
    ```bash
    yarn install
-   lerna bootstrap
    ```
 
-2. Build all packages:
+3. Install dependencies and build all packages:
    ```bash
-   lerna run build
+   yarn install
+   yarn build
    ```
 
-## Usage
+4. Start the development server:
+   ```bash
+   yarn start
+   ```
+   
+   Or start the Theia integration:
+   ```bash
+   yarn start:theia
+   ```
+
+5. Start the Eclipse integration:
+   ```bash
+   yarn start:eclipse
+   ```
+
+
+## 📚 Usage
 
 ### 1. React Package (`@user-management/react`)
 
@@ -55,9 +99,25 @@ This is the core package containing the React components and services for user m
 
 #### Installation
 
+Using Yarn:
 ```bash
 yarn add @user-management/react
 ```
+
+Or using npm:
+```bash
+npm install @user-management/react
+```
+
+#### Peer Dependencies
+
+This package requires the following peer dependencies:
+- React `^17.0.0 || ^18.0.0`
+- React DOM `^17.0.0 || ^18.0.0`
+- TypeScript `^4.0.0`
+- Styled Components `^5.0.0`
+
+Make sure to install these in your project if they're not already present.
 
 #### Basic Usage
 
@@ -134,71 +194,94 @@ script.onload = () => {
 };
 ```
 
-## Development
+## 🛠 Development
 
 ### Prerequisites
 
-- Node.js v16 or later
-- Yarn 1.22 or later
-- Lerna (installed globally via `npm install -g lerna`)
+- Node.js `^16.14.0`
+- Yarn `^1.22.0` or npm `^8.0.0`
+- Git
 
-### Setup
+### Development Commands
 
-1. Clone the repository
-2. Install dependencies:
+| Command | Description |
+|---------|-------------|
+| `yarn install` | Install all dependencies |
+| `yarn build` | Build all packages |
+| `yarn build:react` | Build only the React package |
+| `yarn build:theia` | Build only the Theia package |
+| `yarn build:eclipse` | Build only the Eclipse package |
+| `yarn start` | Start the React development server |
+| `yarn start:theia` | Start the Theia integration |
+| `yarn test` | Run tests for all packages |
+| `yarn test:watch` | Run tests in watch mode |
+| `yarn test:coverage` | Generate test coverage report |
+| `yarn lint` | Lint all packages |
+| `yarn lint:fix` | Fix linting issues |
+| `yarn format` | Format code using Prettier |
+| `yarn clean` | Clean build artifacts |
+
+### Development Workflow
+
+1. Create a new branch for your feature or bugfix:
    ```bash
-   yarn install
+   git checkout -b feat/feature-name
+   # or
+   git checkout -b fix/bug-name
    ```
-3. Bootstrap the monorepo:
+
+2. Make your changes and commit them following the [Conventional Commits](https://www.conventionalcommits.org/) specification:
    ```bash
-   lerna bootstrap
+   git commit -m "feat(scope): add new feature"
    ```
 
-### Building
+3. Push your changes and create a pull request:
+   ```bash
+   git push origin HEAD
+   ```
 
-Build all packages:
-```bash
-lerna run build
-```
+### Testing
 
-Build a specific package:
-```bash
-cd packages/<package-name>
-yarn build
-```
-
-### Adding Dependencies
-
-Add a dependency to a specific package:
-```bash
-lerna add <package> --scope=@user-management/<package-name>
-```
-
-Add a dev dependency:
-```bash
-lerna add <package> --dev --scope=@user-management/<package-name>
-```
-
-### Running Tests
-
-Run tests for all packages:
+Run all tests:
 ```bash
 lerna run test
 ```
 
-Run tests for a specific package:
+Run tests in watch mode for a specific package:
 ```bash
 cd packages/<package-name>
-yarn test
+yarn test:watch
 ```
 
-### Development Workflow
+Run tests with coverage:
+```bash
+lerna run test:coverage
+```
 
-1. Make your changes in the appropriate package
-2. Build the package(s) you've modified
-3. Test your changes
-4. Commit following [Conventional Commits](https://www.conventionalcommits.org/)
-5. Create a pull request
+### Linting and Formatting
+
+Lint all packages:
+```bash
+lerna run lint
+```
+
+Format all code:
+```bash
+lerna run format
+```
+
+### Versioning and Publishing
+
+1. Update the version in `package.json`
+2. Create a git tag:
+   ```bash
+   git tag v1.0.0
+   git push origin v1.0.0
+   ```
+3. Publish to npm:
+   ```bash
+   npm publish
+   ```
 
 ### Versioning and Publishing
 
@@ -223,6 +306,26 @@ Build all packages for production:
 lerna run build
 ```
 
-## License
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with ❤️ by the User Management Team
+- Thanks to all contributors who have helped improve this project
+- Inspired by modern user management solutions
+
+## 📬 Contact
+
+For questions or feedback, please open an issue or contact us at [email@example.com](mailto:email@example.com).
+
+---
+
+<div align="center">
+  Made with ❤️ by Your Team Name
+</div>
