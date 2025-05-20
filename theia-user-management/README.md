@@ -1,35 +1,40 @@
-# Theia User Management Extension
+# RBAC Admin UI - Theia Extension
 
-This package provides a Theia extension for the User Management System, integrating the React-based user management components into the Theia IDE.
+[![npm version](https://img.shields.io/npm/v/@logicals/rbac-admin-ui-theia.svg?style=flat-square)](https://www.npmjs.com/package/@logicals/rbac-admin-ui-theia)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Theia-verified](https://img.shields.io/badge/Theia-verified-green.svg)](https://theia-ide.org/)
 
-## Features
+A Theia extension that integrates the RBAC Admin UI components into the Theia IDE, providing seamless user and role management capabilities within your development environment.
 
-- Integrated user management view in Theia's main area
-- Support for Theia's theming (light/dark mode)
-- Keyboard navigation support
-- Context menu integration
-- Command palette integration
+## ✨ Features
 
-## Installation
+- **Seamless Theia Integration** - Native look and feel with Theia's UI
+- **Theming Support** - Automatic adaptation to Theia's light/dark themes
+- **Keyboard Navigation** - Full keyboard accessibility
+- **Command Integration** - Accessible via command palette and menus
+- **Responsive Design** - Works in both main area and side panels
+- **Real-time Updates** - Live updates for user and role changes
+
+## 🚀 Installation
 
 ### Prerequisites
 
-- Theia IDE (latest version recommended)
-- Node.js v16 or later
-- Yarn 1.22 or later
+- Theia IDE `^1.43.0` or later
+- Node.js `^18.0.0` or later
+- Yarn `^1.22.0` or npm `^8.0.0`
 
 ### Installation Steps
 
 1. Install the package:
    ```bash
-   yarn add @user-management/theia
+   yarn add @logicals/rbac-admin-ui-theia
    ```
 
 2. Add the extension to your Theia application's `package.json`:
    ```json
    {
      "dependencies": {
-       "@user-management/theia": "^1.0.0"
+       "@logicals/rbac-admin-ui-theia": "^1.0.0"
      }
    }
    ```

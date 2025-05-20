@@ -1,4 +1,4 @@
-import { UserManagement } from '@user-management/react';
+import { UserManagement } from '@logicals/rbac-admin-ui-react';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 

@@ -3,7 +3,7 @@ import { injectable, inject } from '@theia/core/shared/inversify';
 import { ReactWidget, Message } from '@theia/core/lib/browser';
 import { MessageService } from '@theia/core';
 import { Box, Paper, ThemeProvider, createTheme, CssBaseline } from '@mui/material';
-import { UserManagement, UserProfile, User, UserManagementProvider } from '@user-management/react';
+import { UserManagement, UserProfile, User, UserManagementProvider } from '@logicals/rbac-admin-ui-react';
 
 const theme = createTheme({
   palette: {

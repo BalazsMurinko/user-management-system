@@ -1,5 +1,5 @@
 {
-  "name": "user-management-system",
+  "name": "rbac-admin-ui",
   "private": true,
   "workspaces": [
     "react-user-management",

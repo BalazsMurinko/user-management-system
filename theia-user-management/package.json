@@ -18,8 +18,8 @@
   },
   "devDependencies": {
     "@theia/cli": "^1.43.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
     "rimraf": "^5.0.0",
     "typescript": "^5.0.0"
   },

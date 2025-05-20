@@ -1,4 +1,4 @@
-declare module '@user-management/react' {
+declare module '@logicals/rbac-admin-ui-react' {
   import * as React from 'react';
   
   export interface User {

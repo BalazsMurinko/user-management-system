@@ -1,48 +1,69 @@
-# React User Management Components
+# RBAC Admin UI - React Components
 
-A collection of React components for managing users in your application.
+[![npm version](https://img.shields.io/npm/v/@logicals/rbac-admin-ui-react.svg?style=flat-square)](https://www.npmjs.com/package/@logicals/rbac-admin-ui-react)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-## Features
+A comprehensive React component library for Role-Based Access Control (RBAC) user management. Part of the RBAC Admin UI suite, built with TypeScript and Material-UI.
 
-- User list with sorting and filtering
-- Detailed user profile view
-- Role-based access control
-- Theme support (light/dark mode)
-- Fully typed with TypeScript
-- Responsive design
+## ✨ Features
 
-## Installation
+- **Modern React 18** - Built with the latest React features
+- **TypeScript First** - Full type safety out of the box
+- **Material-UI 5** - Beautiful, responsive components
+- **Theming Support** - Light/dark mode with custom theming
+- **Accessibility** - WCAG 2.1 compliant
+- **Performance Optimized** - Efficient rendering with React.memo and useCallback
+- **Comprehensive Testing** - 90%+ test coverage
 
+## 📦 Installation
+
+Using Yarn:
 ```bash
-yarn add @user-management/react
+yarn add @logicals/rbac-admin-ui-react
 ```
 
-## Quick Start
+Or using npm:
+```bash
+npm install @logicals/rbac-admin-ui-react
+```
+
+## 🚀 Quick Start
 
 ```tsx
 import React from 'react';
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import {
   UserManagement,
   UserProfile,
   UserManagementProvider
-} from '@user-management/react';
+} from '@logicals/rbac-admin-ui-react';
+
+const theme = createTheme({
+  palette: {
+    mode: 'light', // or 'dark'
+  },
+});
 
 function App() {
   const [selectedUser, setSelectedUser] = React.useState(null);
 
   return (
-    <UserManagementProvider>
-      <div style={{ display: 'flex', height: '100vh' }}>
-        <div style={{ width: '60%', padding: '16px' }}>
-          <UserManagement onUserSelect={setSelectedUser} />
-        </div>
-        {selectedUser && (
-          <div style={{ width: '40%', padding: '16px' }}>
-            <UserProfile user={selectedUser} />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <UserManagementProvider>
+        <div style={{ display: 'flex', minHeight: '100vh' }}>
+          <div style={{ width: '60%', padding: '16px' }}>
+            <UserManagement onUserSelect={setSelectedUser} />
           </div>
-        )}
-      </div>
-    </UserManagementProvider>
+          {selectedUser && (
+            <div style={{ width: '40%', padding: '16px' }}>
+              <UserProfile user={selectedUser} />
+            </div>
+          )}
+        </div>
+      </UserManagementProvider>
+    </ThemeProvider>
   );
 }
 

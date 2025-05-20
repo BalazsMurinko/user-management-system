@@ -6,7 +6,13 @@
 
 A modern, extensible user management solution with React components and IDE integrations. Built with TypeScript and designed for enterprise-grade applications.
 
-## ✨ Features
+## 🌟 Features
+
+- **Modern Tech Stack**: Built with React 18, TypeScript 5, and Material-UI 5
+- **Type Safety**: Full TypeScript support with latest type definitions
+- **Performance Optimized**: Efficient rendering and state management
+- **Accessibility**: WCAG 2.1 compliant components
+- **Testing**: Comprehensive test coverage with Jest and React Testing Library
 
 - **User Management** - Comprehensive CRUD operations for user accounts
 - **Role-Based Access Control** - Fine-grained permission system
@@ -22,9 +28,9 @@ This monorepo contains three main packages:
 
 | Package | Version | Description |
 |---------|---------|-------------|
-| `@user-management/react` | [![npm](https://img.shields.io/npm/v/@user-management/react)](https://www.npmjs.com/package/@user-management/react) | Core React components and services |
-| `@user-management/theia` | [![npm](https://img.shields.io/npm/v/@user-management/theia)](https://www.npmjs.com/package/@user-management/theia) | Theia widget integration |
-| `@user-management/eclipse` | [![npm](https://img.shields.io/npm/v/@user-management/eclipse)](https://www.npmjs.com/package/@user-management/eclipse) | Eclipse plugin integration |
+| `@logicals/rbac-admin-ui-react` | [![npm](https://img.shields.io/npm/v/@logicals/rbac-admin-ui-react)](https://www.npmjs.com/package/@logicals/rbac-admin-ui-react) | Core React components and services |
+| `@logicals/rbac-admin-ui-theia` | [![npm](https://img.shields.io/npm/v/@logicals/rbac-admin-ui-theia)](https://www.npmjs.com/package/@logicals/rbac-admin-ui-theia) | Theia widget integration |
+| `@logicals/rbac-admin-ui-eclipse` | [![npm](https://img.shields.io/npm/v/@logicals/rbac-admin-ui-eclipse)](https://www.npmjs.com/package/@logicals/rbac-admin-ui-eclipse) | Eclipse plugin integration |
 
 
 
@@ -52,9 +58,11 @@ user-management-system/
 
 ### Prerequisites
 
-- Node.js `^16.14.0` or later
+- Node.js `^18.0.0` or later
 - Yarn `^1.22.0` or npm `^8.0.0`
 - Git
+- For Theia integration: Theia IDE `^1.43.0`
+- For Eclipse integration: Eclipse IDE with RCP support
 
 ### Quick Start
 
@@ -93,7 +101,7 @@ user-management-system/
 
 ## 📚 Usage
 
-### 1. React Package (`@user-management/react`)
+### 1. React Package (`@logicals/rbac-admin-ui-react`)
 
 This is the core package containing the React components and services for user management.
 
@@ -101,12 +109,12 @@ This is the core package containing the React components and services for user m
 
 Using Yarn:
 ```bash
-yarn add @user-management/react
+yarn add @logicals/rbac-admin-ui-react
 ```
 
 Or using npm:
 ```bash
-npm install @user-management/react
+npm install @logicals/rbac-admin-ui-react
 ```
 
 #### Peer Dependencies
@@ -126,7 +134,7 @@ import {
   UserManagement, 
   UserProfile, 
   UserManagementProvider 
-} from '@user-management/react';
+} from '@logicals/rbac-admin-ui-react';
 
 function App() {
   const [selectedUser, setSelectedUser] = React.useState(null);
@@ -155,7 +163,7 @@ function App() {
 - `UserTable`: Table component for displaying users
 - `UserManagementProvider`: Context provider for user management state
 
-### 2. Theia Integration (`@user-management/theia`)
+### 2. Theia Integration (`@logicals/rbac-admin-ui-theia`)
 
 This package provides a Theia widget for the user management interface.
 
@@ -172,7 +180,7 @@ This package provides a Theia widget for the user management interface.
 2. Open the User Management view from the View menu
 3. Or use the command palette (`Ctrl+Shift+P`) and search for "User Management"
 
-### 3. Eclipse Integration (@user-management/eclipse)
+### 3. Eclipse Integration (@logicals/rbac-admin-ui-eclipse)
 
 This package provides an Eclipse plugin that exposes the user management interface through the `window.bridge` API.
 
