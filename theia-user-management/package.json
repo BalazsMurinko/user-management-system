@@ -1,6 +1,6 @@
 {
-  "name": "@logicals/rbac-admin-ui-theia",
-  "version": "1.0.0",
+  "name": "@local/rbac-admin-ui-theia",
+  "version": "1.0.4",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -10,7 +10,7 @@
     "watch": "tsc -w"
   },
   "dependencies": {
-    "@logicals/rbac-admin-ui-react": "^1.0.0",
+    "@local/rbac-admin-ui-react": "^1.0.0",
     "@theia/core": "^1.43.0",
     "@theia/plugin-ext": "^1.43.0",
     "react": "^18.2.0",
@@ -29,8 +29,12 @@
       "frontendElectron": "lib/electron-main/electron-main-module"
     }
   ],
-  "keywords": ["theia-extension"],
-  "files": ["lib"],
+  "keywords": [
+    "theia-extension"
+  ],
+  "files": [
+    "lib"
+  ],
   "theia": {
     "frontend": {
       "config": {
