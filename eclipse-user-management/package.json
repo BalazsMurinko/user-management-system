@@ -5,12 +5,13 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "clean": "rimraf lib",
-    "prepare": "yarn run clean && yarn run build"
+    "build": "tsc -b",
+    "bundle": "webpack",
+    "clean": "rimraf lib *.tsbuildinfo app/bundle.js app/bundleq.js.map app/assets/",
+    "lint": "eslint --ext .ts,.tsx ./src"
   },
   "dependencies": {
-    "@local/rbac-admin-ui-react": "^1.0.0"
+    "@local/rbac-admin-ui-react": "*"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",

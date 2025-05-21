@@ -1,0 +1,18 @@
+{
+  "extends": "@logicals/ts-config",
+  "include": [],
+  "compilerOptions": {
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "./react-user-management"
+    },
+    {
+      "path": "./theia-user-management"
+    },
+    {
+      "path": "./eclipse-user-management"
+    }
+  ]
+}

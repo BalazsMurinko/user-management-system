@@ -1,18 +1,14 @@
 {
+  "extends": "@logicals/ts-config",
   "compilerOptions": {
-    "target": "es2018",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "strict": true,
-    "declaration": true,
-    "outDir": "lib",
     "rootDir": "src",
-    "sourceMap": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "react-jsx"
+    "outDir": "lib",
+    "composite": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "lib"]
+  "include": ["src"],
+  "references": [
+    {
+      "path": "../react-user-management"
+    }
+  ]
 }

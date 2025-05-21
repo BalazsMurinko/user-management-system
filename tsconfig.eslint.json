@@ -1,0 +1,8 @@
+{
+  "extends": "@logicals/ts-config",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "exclude": ["**/node_modules", "**/.eslintrc.js", "**/webpack.config.js"],
+  "include": ["common-glsp", "iec-ld-glsp", "iec-ld-webapp"]
+}

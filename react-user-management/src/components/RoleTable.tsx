@@ -17,7 +17,6 @@ import {
   Box,
   Chip,
   Tooltip,
-  TextareaAutosize,
 } from '@mui/material';
 import { Edit as EditIcon, Delete as DeleteIcon, Add as AddIcon } from '@mui/icons-material';
 import { useUserManagement } from '../contexts/UserManagementContext';

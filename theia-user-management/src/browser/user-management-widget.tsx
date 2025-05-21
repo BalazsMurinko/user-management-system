@@ -88,7 +88,7 @@ export class UserManagementWidget extends ReactWidget {
     );
   }
 
-  protected onActivateRequest(msg: Message): void {
+  protected override onActivateRequest(msg: Message): void {
     super.onActivateRequest(msg);
     const node = this.node;
     if (node) {

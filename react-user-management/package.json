@@ -8,10 +8,9 @@
     "lib"
   ],
   "scripts": {
-    "build": "webpack --mode production",
-    "build:types": "tsc --emitDeclarationOnly --outDir lib",
-    "prepare": "yarn run build && yarn run build:types",
-    "clean": "rimraf lib"
+    "build": "tsc -b",
+    "clean": "rimraf lib",
+    "lint": "eslint --ext .ts,.tsx ./src"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
