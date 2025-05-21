@@ -14,7 +14,6 @@
     "@local/rbac-admin-ui-react": "*"
   },
   "devDependencies": {
-    "@types/node": "^20.14.2",
     "rimraf": "^3.0.2",
     "typescript": "^5.4.5"
   },

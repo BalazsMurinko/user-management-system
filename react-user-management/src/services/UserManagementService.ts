@@ -7,7 +7,7 @@ export class InMemoryUserManagementService implements UserManagementService {
   async addUser(user: Omit<User, 'id'>): Promise<User> {
     const newUser = {
       ...user,
-      id: this.users.length + 1,
+      id: (this.users.length + 1).toString(),
     };
     this.users.push(newUser);
     return newUser;
@@ -33,7 +33,7 @@ export class InMemoryUserManagementService implements UserManagementService {
   async addRole(role: Omit<Role, 'id'>): Promise<Role> {
     const newRole = {
       ...role,
-      id: this.users.length + 1,
+      id: (this.roles.length + 1).toString(),
     };
     this.roles.push(newRole);
     return newRole;
