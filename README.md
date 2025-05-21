@@ -40,18 +40,29 @@ This monorepo contains three main packages:
 user-management-system/
 ├── react-user-management/      # Core React components and services
 │   ├── src/                    # Source code
+│   │   ├── components/         # Reusable UI components
+│   │   ├── hooks/              # Custom React hooks
+│   │   ├── services/           # API and service layer
+│   │   ├── themes/             # Theme configurations
+│   │   └── utils/              # Utility functions and helpers
 │   ├── public/                 # Static assets
+│   ├── types/                  # TypeScript type definitions
 │   └── __tests__/              # Unit tests
 │
-├── theia-user-management/     # Theia widget integration
+├── theia-user-management/     # Theia IDE integration
 │   └── src/                    # Theia extension code
+│       ├── browser/            # Frontend code
+│       └── common/             # Shared code
 │
-├── eclipse-user-management/   # Eclipse plugin integration
+├── eclipse-user-management/   # Eclipse IDE plugin
 │   └── src/                    # Plugin source code
 │
 ├── .github/                  # GitHub workflows and issue templates
 ├── .vscode/                   # VS Code settings
-└── package.json               # Root package configuration
+├── .eslintrc.js              # ESLint configuration
+├── .prettierrc               # Prettier configuration
+├── tsconfig.json             # TypeScript configuration
+└── package.json              # Root package configuration
 ```
 
 ## 🚀 Getting Started

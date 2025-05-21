@@ -16,17 +16,50 @@ A comprehensive React component library for Role-Based Access Control (RBAC) use
 - **Performance Optimized** - Efficient rendering with React.memo and useCallback
 - **Comprehensive Testing** - 90%+ test coverage
 
-## 📦 Installation
+## 🚀 Getting Started
+
+### Installation
 
 Using Yarn:
 ```bash
-yarn add @logicals/rbac-admin-ui-react
+yarn add @local/rbac-admin-ui-react
 ```
 
 Or using npm:
 ```bash
-npm install @logicals/rbac-admin-ui-react
+npm install @local/rbac-admin-ui-react
 ```
+
+### Peer Dependencies
+
+Make sure you have these peer dependencies installed:
+
+```bash
+yarn add react@^18.2.0 react-dom@^18.2.0 @emotion/react@^11.11.0 @emotion/styled@^11.11.0 @mui/material@^5.15.0
+```
+
+### Development Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/user-management-system.git
+   cd user-management-system/react-user-management
+   ```
+
+2. Install dependencies:
+   ```bash
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   yarn start
+   ```
+
+4. Build for production:
+   ```bash
+   yarn build
+   ```
 
 ## 🚀 Quick Start
 

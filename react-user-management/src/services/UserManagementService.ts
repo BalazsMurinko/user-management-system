@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
 import { User, UserManagementService, Role } from '../types';
 
 export class InMemoryUserManagementService implements UserManagementService {
@@ -8,7 +7,7 @@ export class InMemoryUserManagementService implements UserManagementService {
   async addUser(user: Omit<User, 'id'>): Promise<User> {
     const newUser = {
       ...user,
-      id: uuidv4(),
+      id: this.users.length + 1,
     };
     this.users.push(newUser);
     return newUser;
@@ -34,7 +33,7 @@ export class InMemoryUserManagementService implements UserManagementService {
   async addRole(role: Omit<Role, 'id'>): Promise<Role> {
     const newRole = {
       ...role,
-      id: uuidv4(),
+      id: this.users.length + 1,
     };
     this.roles.push(newRole);
     return newRole;

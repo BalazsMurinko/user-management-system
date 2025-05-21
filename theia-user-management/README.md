@@ -15,7 +15,7 @@ A Theia extension that integrates the RBAC Admin UI components into the Theia ID
 - **Responsive Design** - Works in both main area and side panels
 - **Real-time Updates** - Live updates for user and role changes
 
-## 🚀 Installation
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -23,18 +23,18 @@ A Theia extension that integrates the RBAC Admin UI components into the Theia ID
 - Node.js `^18.0.0` or later
 - Yarn `^1.22.0` or npm `^8.0.0`
 
-### Installation Steps
+### Installation
 
 1. Install the package:
    ```bash
-   yarn add @logicals/rbac-admin-ui-theia
+   yarn add @local/rbac-admin-ui-theia
    ```
 
 2. Add the extension to your Theia application's `package.json`:
    ```json
    {
      "dependencies": {
-       "@logicals/rbac-admin-ui-theia": "^1.0.0"
+       "@local/rbac-admin-ui-theia": "^1.0.0"
      }
    }
    ```
@@ -42,6 +42,29 @@ A Theia extension that integrates the RBAC Admin UI components into the Theia ID
 3. Install dependencies:
    ```bash
    yarn install
+   ```
+
+### Development Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/user-management-system.git
+   cd user-management-system/theia-user-management
+   ```
+
+2. Install dependencies:
+   ```bash
+   yarn install
+   ```
+
+3. Build the extension:
+   ```bash
+   yarn build
+   ```
+
+4. Run in development mode:
+   ```bash
+   yarn watch
    ```
 
 ## Usage
