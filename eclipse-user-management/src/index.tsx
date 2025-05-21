@@ -1,6 +1,6 @@
-import { UserManagement } from '@logicals/rbac-admin-ui-react';
+import { UserManagement } from '@local/rbac-admin-ui-react';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOMClient from 'react-dom/client';
 
 declare global {
   interface Window {
@@ -20,7 +20,7 @@ const renderUserManagement = (containerId: string) => {
     return;
   }
 
-  const root = ReactDOM.createRoot(container);
+  const root = ReactDOMClient.createRoot(container);
   root.render(
     <React.StrictMode>
       <UserManagement />

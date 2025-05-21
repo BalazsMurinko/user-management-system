@@ -1,5 +1,5 @@
 {
-  "name": "@logicals/rbac-admin-ui-eclipse",
+  "name": "@local/rbac-admin-ui-eclipse",
   "version": "1.0.0",
   "description": "Eclipse plugin for RBAC Admin UI",
   "main": "lib/index.js",
@@ -10,7 +10,7 @@
     "prepare": "yarn run clean && yarn run build"
   },
   "dependencies": {
-    "@logicals/rbac-admin-ui-react": "^1.0.0"
+    "@local/rbac-admin-ui-react": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
