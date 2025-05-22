@@ -13,6 +13,7 @@
     "build:theia": "cd theia-user-management && yarn build",
     "build:eclipse": "cd eclipse-user-management && yarn build",
     "clean": "yarn workspaces run clean",
+    "publish:all": "node publish-packages.js",
     "start": "cd react-user-management && yarn start",
     "start:theia": "cd theia-user-management && yarn start",
     "test": "yarn workspaces run test",

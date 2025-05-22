@@ -6,7 +6,6 @@ const { useState, useEffect, useCallback, useMemo } = React;
 import type { FormEvent } from 'react';
 import { BridgeService } from '../../services/bridge-rbac-management-service';
 import { User, Role } from '../../services/rbac-management-service';
-import '../rbac-management.css'; // Reusing the same CSS
 import AddUserForm from './add-user-form';
 import UserList from './user-list';
 

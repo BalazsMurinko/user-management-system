@@ -6,7 +6,6 @@ import * as React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import type { FormEvent } from 'react';
 import { Role } from '../../services/rbac-management-service';
-import '../rbac-management.css'; // Reusing the same CSS
 import AddRoleForm from './add-role-form';
 import RoleList from './role-list';
 

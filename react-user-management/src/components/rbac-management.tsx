@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Role } from '../services/rbac-management-service';
 import UserManagementComponent from './user-management/user-management-component';
 import RoleManagementComponent from './role-management/role-management-component';
-import './rbac-management.css';
+import '../styles/rbac-management.css';
 
 /**
  * Tab type for the component
@@ -52,32 +52,32 @@ const RbacManagement: React.FC = () => {
         </button>
       </div>
 
-      {error && <div className="error-message">{error}</div>}
+      {/* Tab Content */}
+      <div className="tab-content">
+        {error && <div className="error-message">{error}</div>}
 
-      {/* Users Tab Content */}
-      {activeTab === 'users' && (
-        <UserManagementComponent
-          roles={roles}
-          loading={loading}
-          setLoading={setLoading}
-          error={error}
-          setError={setError}
-        />
-      )}
-
-      {/* Roles Tab Content */}
-      {activeTab === 'roles' && (
-        <RoleManagementComponent
-          roles={roles}
-          setRoles={setRoles}
-          loading={loading}
-          setLoading={setLoading}
-          error={error}
-          setError={setError}
-        />
-      )}
+        {activeTab === 'users' ? (
+          <UserManagementComponent
+            roles={roles}
+            error={error}
+            setError={setError}
+            loading={loading}
+            setLoading={setLoading}
+          />
+        ) : (
+          <RoleManagementComponent
+            roles={roles}
+            setRoles={setRoles}
+            error={error}
+            setError={setError}
+            loading={loading}
+            setLoading={setLoading}
+          />
+        )}
+      </div>
     </div>
   );
 };
 
+export { RbacManagement };
 export default RbacManagement;

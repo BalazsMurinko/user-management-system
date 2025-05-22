@@ -15,9 +15,13 @@
   },
   "typeRoots": [
     "./node_modules/@types",
-    "./src/@types"
+    "./src/@types",
+    "./src/common/types"
   ],
   "include": ["src"],
+  "paths": {
+    "@local/rbac-types/*": ["./src/common/types/*"]
+  },
   "references": [
     {
       "path": "../react-user-management"
