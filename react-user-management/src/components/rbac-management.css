@@ -1,0 +1,36 @@
+/* 
+ * Copyright (C) logi.cals GmbH. All rights reserved.
+ */
+.rbac-management-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rbac-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.rbac-tab {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom: none;
+  margin-right: 5px;
+}
+
+.rbac-tab.active {
+  border-color: #ccc;
+  border-bottom-color: white;
+  border-radius: 4px 4px 0 0;
+  background-color: white;
+}
+
+.rbac-tab-content {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
