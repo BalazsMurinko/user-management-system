@@ -1,6 +1,6 @@
 {
   "name": "@local/rbac-admin-ui-react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React components for user and role management",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc -b",
-    "clean": "rimraf lib",
+    "clean": "rimraf lib *.tsbuildinfo",
     "publish:local": "yarn publish --registry http://localhost:4873",
     "lint": "eslint --ext .ts,.tsx ./src"
   },
