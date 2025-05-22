@@ -1,15 +1,18 @@
 {
   "name": "@local/rbac-admin-ui-react",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "React components for user and role management",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "src/styles"
   ],
+  "style": "lib/styles/rbac-management.css",
   "scripts": {
-    "build": "tsc -b",
-    "clean": "rimraf lib *.tsbuildinfo",
+    "build": "yarn clean && tsc -b && yarn copy:assets",
+    "clean": "rimraf lib tsconfig.tsbuildinfo",
+    "copy:assets": "copyfiles -u 1 \"src/**/*.css\" lib/ && copyfiles -u 1 \"src/styles/*.css\" lib/styles/",
     "publish:local": "yarn publish --registry http://localhost:4873",
     "lint": "eslint --ext .ts,.tsx ./src"
   },
@@ -26,6 +29,7 @@
     "@types/webpack-env": "^1.18.3",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
+    "copyfiles": "^2.4.1",
     "css-loader": "^7.1.2",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
