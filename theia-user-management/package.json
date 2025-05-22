@@ -1,16 +1,16 @@
 {
   "name": "@local/rbac-admin-ui-theia",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc -b",
-    "clean": "rimraf lib",
+    "clean": "rimraf lib *.tsbuildinfo",
     "publish:local": "yarn publish --registry http://localhost:4873",
     "lint": "eslint --ext .ts,.tsx ./src"
   },
   "dependencies": {
-    "@local/rbac-admin-ui-react": "0.0.2",
+    "@local/rbac-admin-ui-react": "0.0.4",
     "@theia/core": "^1.43.0",
     "@theia/plugin-ext": "^1.43.0",
     "react": "^18.2.0",
