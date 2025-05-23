@@ -6,7 +6,12 @@ import { useState } from 'react';
 import { Role } from '../services/rbac-management-service';
 import UserManagementComponent from './user-management/user-management-component';
 import RoleManagementComponent from './role-management/role-management-component';
-import '../styles/rbac-management.css';
+import { rbacManagementStyles } from '../styles';
+
+// Inject styles
+const styleElement = document.createElement('style');
+styleElement.textContent = rbacManagementStyles;
+document.head.appendChild(styleElement);
 
 /**
  * Tab type for the component

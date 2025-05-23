@@ -1,10 +1,12 @@
 {
   "name": "@local/rbac-admin-ui-theia",
-  "version": "1.0.1",
+  "version": "1.0.20",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc -b",
+    "prepare": "yarn build",
+    "build": "yarn clean && tsc -b",
+    "watch": "tsc -b -w",
     "clean": "rimraf lib tsconfig.tsbuildinfo",
     "publish:local": "yarn publish --registry http://localhost:4873",
     "lint": "eslint --ext .ts,.tsx ./src"
@@ -13,16 +15,21 @@
     "lib"
   ],
   "dependencies": {
-    "@local/rbac-admin-ui-react": "1.0.1",
+    "@local/rbac-admin-ui-react": "1.0.20",
     "@theia/core": "^1.43.0",
     "@theia/plugin-ext": "^1.43.0",
+    "inversify": "^7.5.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "reflect-metadata": "^0.2.2",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@theia/cli": "^1.43.0",
+    "@types/node": "^22.15.21",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
+    "@types/reflect-metadata": "^0.1.0",
     "typescript": "^5.0.0"
   },
   "theiaExtensions": [
@@ -39,7 +46,15 @@
     "frontend": {
       "config": {
         "webpack": "webpack.config.js"
-      }
-    }
-  }
+      },
+      "module": "./lib/browser/frontend-application-module"
+    },
+    "backend": {
+      "module": "./lib/node/backend-module"
+    },
+    "target": "browser"
+  },
+  "theia-references": [
+    "theia.config.js"
+  ]
 }

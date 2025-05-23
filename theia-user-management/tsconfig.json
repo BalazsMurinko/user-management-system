@@ -1,6 +1,7 @@
 {
- "extends": "@logicals/ts-config",
+  "extends": "@logicals/ts-config",
   "compilerOptions": {
+    "types": [],
     "esModuleInterop": true,
     "sourceMap": true,
     "outDir": "lib",
@@ -11,17 +12,17 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "composite": true
+    "composite": true,
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "paths": {
+      "@local/rbac-types/*": ["./src/common/types/*"],
+      "@local/rbac-admin-ui-theia/*": ["./src/*"],
+      "@local/rbac-admin-ui-react": ["../react-user-management/src"]
+    }
   },
-  "typeRoots": [
-    "./node_modules/@types",
-    "./src/@types",
-    "./src/common/types"
-  ],
-  "include": ["src"],
-  "paths": {
-    "@local/rbac-types/*": ["./src/common/types/*"]
-  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
   "references": [
     {
       "path": "../react-user-management"
